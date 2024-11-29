@@ -25,12 +25,10 @@ getMsgs();
   <main class="flex flex-col items-center justify-center h-dvh">
     <content class="w-1/3">
       <img src="/logo2.svg" alt="DFINITY logo" class="w-full" />
-      <br />
-      <br />
-      <form action="#" @submit="handleSubmit">
-        <label for="msg">Enter your msg: &nbsp;</label>
-        <input id="msg" alt="msg" type="text" class="border-black border rounded-md m-5 p-1" />
-        <button type="submit" class="border p-1 rounded-md">Click Me!</button>
+      <form action="#" @submit="handleSubmit" class="mx-auto grid grid-flow-col items-center my-10">
+        <label for="msg" class="text-center">Enter your msg: &nbsp;</label>
+        <input id="msg" alt="msg" type="text" class="border-black border rounded-md p-1 mr-5" />
+        <button type="submit" class="border p-1 rounded-md hover:bg-slate-200">Click Me!</button>
       </form>
       <section id="displayChat" class="border w-full rounded-md">
         <div v-for="msg in displayChat" class="p-5 border-b last:border-b-0">{{ msg }}</div>
